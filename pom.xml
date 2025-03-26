@@ -195,12 +195,11 @@
         <version>${commons.changes.version}</version>
         <configuration>
           <xmlPath>${basedir}/src/changes/changes.xml</xmlPath>
-          <issueLinkTemplate>%URL%/%ISSUE%</issueLinkTemplate>
         </configuration>
         <reportSets>
           <reportSet>
             <reports>
-               <report>changes-report</report>
+              <report>changes-report</report>
             </reports>
           </reportSet>
         </reportSets>
@@ -208,6 +207,7 @@
       <plugin>
         <groupId>org.apache.maven.plugins</groupId>
         <artifactId>maven-checkstyle-plugin</artifactId>
+        <version>${commons.checkstyle-plugin.version}</version>
         <configuration>
           <configLocation>${checkstyle.config.file}</configLocation>
           <enableRulesSummary>false</enableRulesSummary>
@@ -219,6 +219,7 @@
       <plugin>
         <groupId>com.github.spotbugs</groupId>
         <artifactId>spotbugs-maven-plugin</artifactId>
+        <version>${commons.spotbugs.version}</version>
         <configuration>
           <threshold>Normal</threshold>
           <effort>Default</effort>
